@@ -30,7 +30,7 @@ with st.sidebar:
                            type="password",
                            placeholder="Tempel kunci API di sini...")
     
-   if not api_key:
+if not api_key:
         st.markdown("""
         <div style="
             background-color: #eaf4fc; 
