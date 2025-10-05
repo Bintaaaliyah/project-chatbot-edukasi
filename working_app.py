@@ -30,18 +30,28 @@ with st.sidebar:
                            type="password",
                            placeholder="Tempel kunci API di sini...")
     
-    if not api_key:
+   if not api_key:
         st.markdown("""
-        <div class="sidebar-box">
-        <strong>🔒 Cara mendapatkan kunci API:</strong><br>
-        1. Kunjungi <a href="https://aistudio.google.com/" target="_blank">Google AI Studio</a><br>
-        2. Login dengan akun Google<br>
-        3. Klik "Create API Key"<br>
-        4. Salin dan tempel di atas
+        <div style="
+            background-color: #eaf4fc; 
+            padding: 15px; 
+            border-radius: 12px; 
+            border-left: 6px solid #1f77b4;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            margin-top: 10px;
+        ">
+            <h4 style="color: #1f77b4; margin-bottom: 8px;">🔐 Cara Mendapatkan Kunci API</h4>
+            <ol style="color: #333; line-height: 1.6; font-size: 16px; padding-left: 20px;">
+                <li>Kunjungi <a href="https://makersuite.google.com/app/apikey" target="_blank" style="color:#1f77b4; font-weight:600;">Google AI Studio</a></li>
+                <li>Login menggunakan akun Google kamu</li>
+                <li>Klik tombol <b>"Create API Key"</b></li>
+                <li>Salin dan tempel kunci tersebut ke kolom di atas</li>
+            </ol>
         </div>
         """, unsafe_allow_html=True)
         st.stop()
-    else:
+
+else:
         st.success("✅ Kunci API Siap!")
 
 # Fungsi untuk memanggil API Gemini langsung
